@@ -81,6 +81,56 @@ section h3 {
   padding-left: 20px;
 }
 
+.activity-card .participants-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 8px;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  color: #234;
+  font-size: 15px;
+  background: #e3ecfa;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-style: normal;
+  word-break: break-all;
+  border-left: 4px solid #1a237e;
+  box-shadow: 0 1px 2px rgba(26, 35, 126, 0.04);
+  min-height: 40px;
+  border: 2px dashed #3949ab; /* destaque temporário para depuração */
+}
+
+.activity-card .participants-line strong {
+  color: #1a237e;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.activity-card .participant-email {
+  display: inline-block;
+  background: linear-gradient(90deg, #e8eaf6 60%, #c5cae9 100%);
+  color: #1a237e;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  border: 1px solid #c5cae9;
+  font-family: monospace;
+  vertical-align: middle;
+  box-shadow: 0 1px 2px rgba(26, 35, 126, 0.07);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.activity-card .participant-email:hover {
+  background: #3949ab;
+  color: #fff;
+  border-color: #1a237e;
+}
+
 .form-group {
   margin-bottom: 15px;
 }

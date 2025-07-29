@@ -23,16 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
+        // Melhora a estrutura HTML dos participantes para melhor layout
         activityCard.innerHTML = `
           <h4>${name}</h4>
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <p><strong>Participantes:</strong> ${
-            details.participants && details.participants.length > 0
-              ? details.participants.join(", ")
-              : 'Nenhum participante inscrito'
-          }</p>
+          <div class="participants-line">
+            <strong>Participantes:</strong>
+            ${
+              details.participants && details.participants.length > 0
+                ? details.participants.map(email => `<span class="participant-email">${email}</span>`).join("")
+                : '<span style="opacity:0.7;font-style:italic;">Nenhum participante inscrito</span>'
+            }
+          </div>
         `;
 
         activitiesList.appendChild(activityCard);
